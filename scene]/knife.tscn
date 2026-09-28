@@ -1,23 +1,23 @@
 [gd_scene format=3 uid="uid://c8nn8ygpjsgon"]
 
-[ext_resource type="Texture2D" uid="uid://c74n524a6pndt" path="res://Knife's.png" id="1_dl1sv"]
 [ext_resource type="Script" uid="uid://kqcr8jdao13w" path="res://script/knife.gd" id="1_mrrqo"]
+[ext_resource type="Texture2D" uid="uid://chk0nae554a1e" path="res://assets/Basic Knife Pack/Knife 2.png" id="2_mrrqo"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_48cc6"]
-size = Vector2(116, 80)
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_48cc6"]
+points = PackedVector2Array(3.9236586, -16.018892, 0.937998, -13.004621, 3.061957, 12.985549, 7.061912, 12.966475, 4.928416, -15.023673)
 
 [node name="Area2D" type="Area2D" unique_id=563227004]
 script = ExtResource("1_mrrqo")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1903942939]
-position = Vector2(1.0000019, 1)
-scale = Vector2(0.42193308, 0.3401487)
-texture = ExtResource("1_dl1sv")
-region_enabled = true
-region_rect = Rect2(908.8, 176.96533, 269.50006, 269.33475)
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=842284046]
+position = Vector2(2.0000076, 2.9999924)
+rotation = 2.3457224
+scale = Vector2(0.059, 0.052)
+texture = ExtResource("2_mrrqo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=267350909]
-position = Vector2(1, 0)
-shape = SubResource("RectangleShape2D_48cc6")
+position = Vector2(9.536743e-07, 5.5878218e-09)
+rotation = 1.5755649
+shape = SubResource("ConvexPolygonShape2D_48cc6")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
