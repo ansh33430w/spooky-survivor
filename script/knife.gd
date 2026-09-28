@@ -8,6 +8,7 @@ var direction :Vector2 = Vector2.RIGHT
 
 func _ready() -> void:
 	rotation = direction.angle()
+	$Sprite2D.rotation = deg_to_rad(45)
 	get_tree().create_timer(duratin).timeout.connect(queue_free)
 	
 func _physics_process(delta: float) -> void:

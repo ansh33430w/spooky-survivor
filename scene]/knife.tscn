@@ -4,18 +4,20 @@
 [ext_resource type="Script" uid="uid://kqcr8jdao13w" path="res://script/knife.gd" id="1_mrrqo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_48cc6"]
-size = Vector2(262, 270)
+size = Vector2(116, 80)
 
 [node name="Area2D" type="Area2D" unique_id=563227004]
 script = ExtResource("1_mrrqo")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1903942939]
+position = Vector2(1.0000019, 1)
+scale = Vector2(0.42193308, 0.3401487)
 texture = ExtResource("1_dl1sv")
 region_enabled = true
 region_rect = Rect2(908.8, 176.96533, 269.50006, 269.33475)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=267350909]
-position = Vector2(0, 1)
+position = Vector2(1, 0)
 shape = SubResource("RectangleShape2D_48cc6")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

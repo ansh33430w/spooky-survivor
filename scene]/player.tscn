@@ -29,3 +29,5 @@ shape = SubResource("RectangleShape2D_48cc6")
 [node name="Timer" type="Timer" parent="." unique_id=1776694687]
 wait_time = 0.639
 autostart = true
+
+[node name="shootpoint" type="Node2D" parent="." unique_id=1523559402]
