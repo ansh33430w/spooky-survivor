@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://ckwqqdyuyuaee"]
+
+[ext_resource type="Texture2D" uid="uid://5lqrr1qfwwc8" path="res://assets/PNG/4_game_background/4_game_background.png" id="1_s7cgi"]
+[ext_resource type="FontFile" uid="uid://ce1b5dcwmb475" path="res://assets/Blackcraft_Font_1_00/Blackcraft.ttf" id="2_3wghk"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_3wghk"]
+light_mode = 1
+
+[sub_resource type="Gradient" id="Gradient_puvl2"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0, 0.6814516, 1)
+colors = PackedColorArray(1, 0, 0, 1, 1.035742, 0.4636001, 0.4636001, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_8vbdi"]
+gradient = SubResource("Gradient_puvl2")
+fill = 1
+fill_from = Vector2(0.502907, 0.5261628)
+fill_to = Vector2(0.15988372, 0.84011626)
+
+[node name="main menu" type="Control" unique_id=514885212]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="1GameBackground" type="Sprite2D" parent="." unique_id=1401435205]
+position = Vector2(576.50006, 324)
+scale = Vector2(0.5994792, 0.6)
+texture = ExtResource("1_s7cgi")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=153560308]
+color = Color(0.32544088, 0.3254409, 0.32544088, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1608927640]
+material = SubResource("CanvasItemMaterial_3wghk")
+layout_mode = 0
+offset_left = 335.0
+offset_top = 187.0
+offset_right = 797.0
+offset_bottom = 286.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.6, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_3wghk")
+theme_override_font_sizes/font_size = 64
+text = "SPOOKY SURVIVOR"
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1291178112]
+position = Vector2(570.99994, 225)
+scale = Vector2(11.144531, 4.5273433)
+color = Color(1, 0.25, 0.25, 1)
+energy = 1.35
+texture = SubResource("GradientTexture2D_8vbdi")
