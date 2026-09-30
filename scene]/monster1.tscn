@@ -129,7 +129,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_qvmm4")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"ATK",
 "speed": 5.0
 }, {
@@ -146,7 +146,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_cc2pb")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"DEATH",
 "speed": 5.0
 }, {
@@ -163,7 +163,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_bna3i")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"HURT",
 "speed": 5.0
 }, {
@@ -202,11 +202,11 @@ radius = 4.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8vbdi"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_1iui0"]
-radius = 17.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1iui0"]
+size = Vector2(17, 20)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_8vbdi"]
-radius = 15.297058
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7ahn3"]
+size = Vector2(26, 20)
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=986348974]
 script = ExtResource("1_7ahn3")
@@ -214,8 +214,7 @@ script = ExtResource("1_7ahn3")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1820880490]
 position = Vector2(-2, 0)
 sprite_frames = SubResource("SpriteFrames_jxlvq")
-animation = &"ATK"
-frame_progress = 0.61050963
+animation = &"RUN"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1221357171]
 position = Vector2(-1, 5)
@@ -230,10 +229,15 @@ debug_color = Color(0.21161097, 0.37978724, 3.85046e-07, 0.41960785)
 [node name="hitbox" type="Area2D" parent="." unique_id=1084526922]
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="hitbox" unique_id=1307308019]
-shape = SubResource("CircleShape2D_1iui0")
+position = Vector2(8.5, 0)
+shape = SubResource("RectangleShape2D_1iui0")
 debug_color = Color(0.99981374, 0, 0.115764566, 0.41960785)
 
 [node name="Detect" type="Area2D" parent="." unique_id=152474045]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Detect" unique_id=70394130]
-shape = SubResource("CircleShape2D_8vbdi")
+position = Vector2(13, 0)
+shape = SubResource("RectangleShape2D_7ahn3")
+
+[connection signal="area_entered" from="Detect" to="." method="_on_detect_area_entered"]
+[connection signal="area_exited" from="Detect" to="." method="_on_detect_area_exited"]

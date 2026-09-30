@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://d3wvndmo6hr4j"]
+
+[ext_resource type="Script" uid="uid://bj306b3d03i61" path="res://script/main.gd" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://dfn7coiw07b4s" path="res://scene]/monster1.tscn" id="2_h2yge"]
+[ext_resource type="PackedScene" uid="uid://hvt5rjv50dv3" path="res://scene]/player.tscn" id="3_1bvp3"]
+
+[node name="main" type="Node2D" unique_id=1533728344 node_paths=PackedStringArray("player")]
+script = ExtResource("1_ig7tw")
+monsterscn = ExtResource("2_h2yge")
+player = NodePath("player")
+
+[node name="Timer" type="Timer" parent="." unique_id=116634315]
+wait_time = 3.0189999999999997
+autostart = true
+
+[node name="player" parent="." unique_id=11276629 groups=["player"] instance=ExtResource("3_1bvp3")]

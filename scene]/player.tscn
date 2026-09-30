@@ -12,7 +12,7 @@ gradient = SubResource("Gradient_adng7")
 fill_to = Vector2(0, 0)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_48cc6"]
-size = Vector2(64, 64)
+size = Vector2(58, 58)
 
 [node name="player" type="CharacterBody2D" unique_id=11276629]
 script = ExtResource("1_1erkr")
