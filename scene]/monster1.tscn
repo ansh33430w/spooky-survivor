@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dc0red4gq16vp" path="res://assets/Characters(100x100 split)/Blood Monster_A/Blood Monster_A with shadows/Blood Monster_A_Attack01.png" id="1_6rnvx"]
 [ext_resource type="Script" uid="uid://bsob3ah0ncpx7" path="res://script/monster_1.gd" id="1_7ahn3"]
+[ext_resource type="PackedScene" uid="uid://ciyhiekbkm21p" path="res://scene]/exp_orb.tscn" id="2_1iui0"]
 [ext_resource type="Texture2D" uid="uid://bm0okuack1mf8" path="res://assets/Characters(100x100 split)/Blood Monster_A/Blood Monster_A with shadows/Blood Monster_A_Death.png" id="2_7ahn3"]
 [ext_resource type="Texture2D" uid="uid://bgeorxn2i3sqt" path="res://assets/Characters(100x100 split)/Blood Monster_A/Blood Monster_A with shadows/Blood Monster_A_Hurt.png" id="3_1iui0"]
 [ext_resource type="Texture2D" uid="uid://d2ayv8qvkqbcy" path="res://assets/Characters(100x100 split)/Blood Monster_A/Blood Monster_A with shadows/Blood Monster_A_Walk.png" id="4_tonb7"]
@@ -203,13 +204,14 @@ radius = 4.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8vbdi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1iui0"]
-size = Vector2(17, 20)
+size = Vector2(18, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ahn3"]
-size = Vector2(26, 20)
+size = Vector2(18, 20)
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=986348974]
 script = ExtResource("1_7ahn3")
+expscn = ExtResource("2_1iui0")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1820880490]
 position = Vector2(-2, 0)
@@ -229,14 +231,14 @@ debug_color = Color(0.21161097, 0.37978724, 3.85046e-07, 0.41960785)
 [node name="hitbox" type="Area2D" parent="." unique_id=1084526922]
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="hitbox" unique_id=1307308019]
-position = Vector2(8.5, 0)
+position = Vector2(9, 0)
 shape = SubResource("RectangleShape2D_1iui0")
 debug_color = Color(0.99981374, 0, 0.115764566, 0.41960785)
 
 [node name="Detect" type="Area2D" parent="." unique_id=152474045]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Detect" unique_id=70394130]
-position = Vector2(13, 0)
+position = Vector2(9, 0)
 shape = SubResource("RectangleShape2D_7ahn3")
 
 [connection signal="area_entered" from="Detect" to="." method="_on_detect_area_entered"]

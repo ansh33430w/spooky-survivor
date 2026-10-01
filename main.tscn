@@ -10,7 +10,8 @@ monsterscn = ExtResource("2_h2yge")
 player = NodePath("player")
 
 [node name="Timer" type="Timer" parent="." unique_id=116634315]
-wait_time = 3.0189999999999997
+wait_time = 3.413
 autostart = true
+ignore_time_scale = true
 
 [node name="player" parent="." unique_id=11276629 groups=["player"] instance=ExtResource("3_1bvp3")]

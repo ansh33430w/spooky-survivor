@@ -11,8 +11,14 @@ colors = PackedColorArray(1, 1, 1, 1)
 gradient = SubResource("Gradient_adng7")
 fill_to = Vector2(0, 0)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jxlvq"]
+size = Vector2(65, 63)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_48cc6"]
 size = Vector2(58, 58)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8vbdi"]
+radius = 167.96725
 
 [node name="player" type="CharacterBody2D" unique_id=11276629]
 script = ExtResource("1_1erkr")
@@ -23,6 +29,11 @@ texture = SubResource("GradientTexture2D_8vbdi")
 
 [node name="hurtbox" type="Area2D" parent="." unique_id=1264991839]
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hurtbox" unique_id=1211060908]
+position = Vector2(-0.5, 0.5)
+shape = SubResource("RectangleShape2D_jxlvq")
+debug_color = Color(0.2019071, 0.5132266, 1, 0.41960785)
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1401025644]
 shape = SubResource("RectangleShape2D_48cc6")
 
@@ -31,3 +42,10 @@ wait_time = 0.639
 autostart = true
 
 [node name="shootpoint" type="Node2D" parent="." unique_id=1523559402]
+
+[node name="pickup_radi" type="Area2D" parent="." unique_id=1919285696]
+collision_layer = 0
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pickup_radi" unique_id=2138712306]
+shape = SubResource("CircleShape2D_8vbdi")

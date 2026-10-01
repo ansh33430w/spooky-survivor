@@ -8,6 +8,9 @@ var hitframe = 4
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var hitbox: Area2D = $hitbox
 @onready var detect: Area2D = $Detect
+@export  var expscn :PackedScene
+var exp_value = 10
+ 
 
 var target :Node2D
 
@@ -61,6 +64,7 @@ func damage(amt):
 		)
 		$hurtbox/CollisionShape2D.set_deferred("disabled",true)
 		animated_sprite_2d.play("DEATH")
+		dropexp()
 	else:
 		hurt = true
 		animated_sprite_2d.play("HURT")
@@ -104,3 +108,10 @@ func animation_finished():
 			
 				
 		
+func dropexp():
+	if expscn == null:
+		return
+	var orb  = expscn.instantiate()
+	orb.global_position =  global_position
+	orb.value = exp_value
+	

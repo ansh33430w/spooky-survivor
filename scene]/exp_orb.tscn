@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://ciyhiekbkm21p"]
+
+[ext_resource type="Script" uid="uid://dobc3506bkpj7" path="res://script/exp_orb.gd" id="1_yvlul"]
+
+[sub_resource type="Gradient" id="Gradient_0wwyo"]
+colors = PackedColorArray(0.4294217, 0.59, 0.1711, 1, 0.1586, 0.26, 0.057200007, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_0wwyo"]
+gradient = SubResource("Gradient_0wwyo")
+fill = 1
+fill_from = Vector2(0.492126, 0.47637796)
+fill_to = Vector2(0.9251968, 0.87795275)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0wwyo"]
+size = Vector2(10, 9)
+
+[node name="EXP_ORB" type="Area2D" unique_id=897361739]
+collision_layer = 16
+collision_mask = 0
+script = ExtResource("1_yvlul")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=757939740]
+scale = Vector2(0.15625003, 0.14062497)
+texture = SubResource("GradientTexture2D_0wwyo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=15999025]
+shape = SubResource("RectangleShape2D_0wwyo")

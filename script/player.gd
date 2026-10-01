@@ -16,7 +16,7 @@ func _ready() -> void:
 	timer.timeout.connect(_throwknife)
 
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	var input := Input.get_vector("ui_left","ui_right","ui_up","ui_down")
 	velocity = input*spd
 	move_and_slide()
@@ -39,6 +39,7 @@ func Damage(amt):
 	invincible = true
 	modulate = Color(0.719, 0.034, 0.0, 1.0)
 	await get_tree().create_timer(0.5).timeout
+	invincible = false
 	modulate = Color.WHITE
 	if hlt <=0:
 		get_tree().reload_current_scene()
