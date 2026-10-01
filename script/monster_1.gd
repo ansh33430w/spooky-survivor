@@ -109,9 +109,11 @@ func animation_finished():
 				
 		
 func dropexp():
+	print("func called",expscn)
 	if expscn == null:
 		return
 	var orb  = expscn.instantiate()
+	get_tree().current_scene.add_child(orb)
 	orb.global_position =  global_position
 	orb.value = exp_value
-	
+	print("orb spawn ", orb.global_position)

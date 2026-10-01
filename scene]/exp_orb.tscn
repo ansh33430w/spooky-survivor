@@ -14,7 +14,7 @@ fill_to = Vector2(0.9251968, 0.87795275)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0wwyo"]
 size = Vector2(10, 9)
 
-[node name="EXP_ORB" type="Area2D" unique_id=897361739]
+[node name="EXP_ORB" type="Area2D" unique_id=897361739 groups=["exp_orb"]]
 collision_layer = 16
 collision_mask = 0
 script = ExtResource("1_yvlul")
