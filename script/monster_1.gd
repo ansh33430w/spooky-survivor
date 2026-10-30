@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+@onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
 
 var spd= 80
 var hlt = 20
@@ -54,7 +55,7 @@ func damage(amt):
 	if dead:
 		return
 	hlt -=amt
-		
+	audio_stream_player.play()
 	if hlt <=0 :
 		dead = true
 		playerinrange=false

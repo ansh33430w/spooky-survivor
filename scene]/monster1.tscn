@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bm0okuack1mf8" path="res://assets/Characters(100x100 split)/Blood Monster_A/Blood Monster_A with shadows/Blood Monster_A_Death.png" id="2_7ahn3"]
 [ext_resource type="Texture2D" uid="uid://bgeorxn2i3sqt" path="res://assets/Characters(100x100 split)/Blood Monster_A/Blood Monster_A with shadows/Blood Monster_A_Hurt.png" id="3_1iui0"]
 [ext_resource type="Texture2D" uid="uid://d2ayv8qvkqbcy" path="res://assets/Characters(100x100 split)/Blood Monster_A/Blood Monster_A with shadows/Blood Monster_A_Walk.png" id="4_tonb7"]
+[ext_resource type="AudioStream" uid="uid://dsga5uigs5md6" path="res://scene]/freesound_community-knife-slice-41231.mp3" id="7_tonb7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q2e6x"]
 atlas = ExtResource("1_6rnvx")
@@ -202,7 +203,7 @@ animations = [{
 radius = 4.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8vbdi"]
-size = Vector2(33, 32)
+size = Vector2(51.5, 42.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1iui0"]
 size = Vector2(18, 20)
@@ -226,6 +227,7 @@ shape = SubResource("CircleShape2D_7ahn3")
 [node name="hurtbox" type="Area2D" parent="." unique_id=1591451433]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hurtbox" unique_id=74330335]
+position = Vector2(0, 0.75)
 shape = SubResource("RectangleShape2D_8vbdi")
 debug_color = Color(0.21161097, 0.37978724, 3.85046e-07, 0.41960785)
 
@@ -241,6 +243,9 @@ debug_color = Color(0.99981374, 0, 0.115764566, 0.41960785)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Detect" unique_id=70394130]
 position = Vector2(9, 0)
 shape = SubResource("RectangleShape2D_7ahn3")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1696758096]
+stream = ExtResource("7_tonb7")
 
 [connection signal="area_entered" from="Detect" to="." method="_on_detect_area_entered"]
 [connection signal="area_exited" from="Detect" to="." method="_on_detect_area_exited"]
