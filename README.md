@@ -3,6 +3,7 @@
  Spooky survivor is 2D atmosphere of halloween so , spooky adventure.  
  <img width="630" height="348" alt="image" src="https://github.com/user-attachments/assets/780684d4-bfaf-4a35-9be6-426b9d50d4f0" />
 
+<img width="617" height="334" alt="image" src="https://github.com/user-attachments/assets/54037087-9636-4c76-8d42-ac6d7a5a1c64" />
 
  # Overview
 
