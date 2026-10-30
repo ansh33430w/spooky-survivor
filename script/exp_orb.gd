@@ -12,6 +12,6 @@ func _physics_process(delta: float) -> void:
 		print("orb moving")
 		global_position = global_position.move_toward(target.global_position,speed*delta)
 		if global_position.distance_to(target.global_position)< 10:
-			if target.has_method("getexp"):
-				target.addexp(value)
+			if target.has_method("add_exp"):
+				target.add_exp(value)
 			queue_free()

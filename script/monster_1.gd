@@ -113,7 +113,7 @@ func dropexp():
 	if expscn == null:
 		return
 	var orb  = expscn.instantiate()
-	get_tree().current_scene.add_child(orb)
+	get_tree().current_scene.add_child.call_deferred(orb)
 	orb.global_position =  global_position
 	orb.value = exp_value
 	print("orb spawn ", orb.global_position)

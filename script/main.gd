@@ -7,9 +7,12 @@ var spawn_interval = 1.0
 @export var player:Node2D 
 
 @onready var timer: Timer = $Timer
+@onready var levelup_ui: CanvasLayer = $levelupUI
 
 
 func _ready() -> void:
+	player.levelup.connect(levelup_ui.show_choice)
+	levelup_ui.chosen.connect(player.apply_upgrade)
 	timer.wait_time = spawn_interval
 	timer.timeout.connect(spawnmonster)
 	

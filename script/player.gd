@@ -3,6 +3,11 @@ extends CharacterBody2D
 signal exp_changed(exp:int,exptonext:int)
 signal levelup(level:int)
 
+
+var knife_damage = 10
+var knife_pierce = 0
+
+
 var spd= 200
 var hlt = 100
 var level :=1
@@ -36,6 +41,8 @@ func _throwknife() -> void:
 	knife.global_position = shootpoint.global_position
 	knife.direction = dir
 	#print(global_position ,knife.global_position)
+	knife.damage = knife_damage
+	knife.pierce = knife_pierce
 	get_tree().current_scene.add_child(knife)
 	
 	
@@ -58,6 +65,7 @@ func _on_pickup_radi_area_entered(area: Area2D) -> void:
 		area.target = self
 		
 func add_exp(amt):
+	print("expadded", amt)
 	exp += amt
 	exp_changed.emit(exp,exptonext)
 	while exp >= exptonext:
@@ -65,3 +73,11 @@ func add_exp(amt):
 		exptonext = int(exptonext_base*pow(exptonext_increase, level-1))
 		levelup.emit(level)
 		exp_changed.emit(exp,exptonext)
+
+func apply_upgrade(id:String):
+	match id:
+		"damage": knife_damage += 1 
+		"firerate": timer.wait_time = max(0.1, timer.wait_time*0.85)
+		"pierce":knife_pierce +=1
+		"speed" : spd+=20
+		"heal" : hlt+= 30

@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cds8vmfyglmn1"]
+
+[ext_resource type="Script" uid="uid://c4r43i5ehn4jx" path="res://script/levelup_ui.gd" id="1_y3ane"]
+
+[node name="levelupUI" type="CanvasLayer" unique_id=1452178138]
+process_mode = 3
+script = ExtResource("1_y3ane")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=559910851]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=1452897862]
+layout_mode = 2
+
+[node name="Button2" type="Button" parent="VBoxContainer" unique_id=49695898]
+layout_mode = 2
+
+[node name="Button3" type="Button" parent="VBoxContainer" unique_id=180336044]
+layout_mode = 2

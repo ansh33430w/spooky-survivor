@@ -70,7 +70,7 @@ scale = Vector2(1.1562499, 2.3984373)
 texture = SubResource("GradientTexture2D_48cc6")
 
 [node name="PointLight2D6" type="PointLight2D" parent="." unique_id=689589295]
-position = Vector2(574.5, 230)
+position = Vector2(589.00006, 230)
 scale = Vector2(8.453124, 2.3984373)
 energy = 2.1
 texture = SubResource("GradientTexture2D_48cc6")
