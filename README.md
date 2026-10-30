@@ -32,6 +32,15 @@
 4. differernt weapons
 5. area of effect powers
 
+# project structure
+|- addons [ contains hackatime addon]
+|- assets [ contains assets ]
+|- scenej [ contains all scenes of project except main.tcsn]
+|- scripts [ contains alll script of projects]
+|- main.tscn 
+|- test.tscn
+
+
 
 # how to play
 
