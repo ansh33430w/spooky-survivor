@@ -34,10 +34,15 @@
 
 # project structure
 |- addons [ contains hackatime addon]
+
 |- assets [ contains assets ]
+
 |- scenej [ contains all scenes of project except main.tcsn]
+
 |- scripts [ contains alll script of projects]
+
 |- main.tscn 
+
 |- test.tscn
 
 
@@ -52,6 +57,6 @@ and hit play
 
 arrow keys for movement control
 
-knife wuto fire on mouse position
+knife auto fire on mouse position
    
   
