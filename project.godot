@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name="spooky survivor"
+run/main_scene="uid://ckwqqdyuyuaee"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Bg="*uid://bagnfg824nxgo"
 
 [display]
 

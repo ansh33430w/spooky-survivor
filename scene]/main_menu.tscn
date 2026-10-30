@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://ckwqqdyuyuaee"]
 
+[ext_resource type="Script" uid="uid://cju1fudqbdytg" path="res://scene]/main_menu.gd" id="1_i6s25"]
 [ext_resource type="Texture2D" uid="uid://5lqrr1qfwwc8" path="res://assets/PNG/4_game_background/4_game_background.png" id="1_s7cgi"]
 [ext_resource type="FontFile" uid="uid://ce1b5dcwmb475" path="res://assets/Blackcraft_Font_1_00/Blackcraft.ttf" id="2_3wghk"]
+[ext_resource type="FontFile" uid="uid://hk4f360gvyu1" path="res://assets/GraspingBranchesMedium.ttf" id="3_puvl2"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_3wghk"]
 light_mode = 1
@@ -34,6 +36,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_i6s25")
 
 [node name="1GameBackground" type="Sprite2D" parent="." unique_id=1401435205]
 position = Vector2(576.50006, 324)
@@ -76,6 +79,13 @@ energy = 2.1
 texture = SubResource("GradientTexture2D_48cc6")
 texture_scale = 1.3
 
+[node name="PointLight2D7" type="PointLight2D" parent="." unique_id=453837372]
+position = Vector2(554, 395)
+scale = Vector2(4.154447, 2.89393)
+energy = 2.1
+texture = SubResource("GradientTexture2D_48cc6")
+texture_scale = 1.3
+
 [node name="PointLight2D4" type="PointLight2D" parent="." unique_id=2057839856]
 position = Vector2(226, 389.99997)
 scale = Vector2(0.99999976, 1.0703117)
@@ -85,3 +95,17 @@ texture = SubResource("GradientTexture2D_48cc6")
 position = Vector2(136, 371)
 scale = Vector2(1.5937505, 1.8671879)
 texture = SubResource("GradientTexture2D_48cc6")
+
+[node name="Button" type="Button" parent="." unique_id=1668432782]
+layout_mode = 0
+offset_left = 356.0
+offset_top = 309.0
+offset_right = 767.0
+offset_bottom = 515.0
+theme_override_colors/font_color = Color(0.9016239, 0.38109198, 5.77569e-06, 1)
+theme_override_fonts/font = ExtResource("3_puvl2")
+theme_override_font_sizes/font_size = 64
+text = "START"
+flat = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

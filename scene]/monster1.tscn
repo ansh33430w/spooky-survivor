@@ -212,6 +212,7 @@ size = Vector2(18, 20)
 size = Vector2(18, 20)
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=986348974]
+scale = Vector2(1.54, 1.54)
 script = ExtResource("1_7ahn3")
 expscn = ExtResource("2_1iui0")
 

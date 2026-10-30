@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bagnfg824nxgo"]
+
+[ext_resource type="AudioStream" uid="uid://cubk8yia5xi38" path="res://scene]/bombinsound-halloween-suspense-horror-halloween-waltz-619348.mp3" id="1_pntlx"]
+
+[node name="BG" type="AudioStreamPlayer" unique_id=1459533563]
+process_mode = 3
+stream = ExtResource("1_pntlx")
+autoplay = true

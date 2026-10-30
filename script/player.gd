@@ -7,10 +7,12 @@ signal levelup(level:int)
 
 var lastdir = "DOWN"
 
+signal hp_changed (hp:int , maxhp:int)
+
 var knife_damage = 10
 var knife_pierce = 0
 
-
+var maxhp =100
 var spd= 200
 var hlt = 100
 var level :=1
@@ -20,7 +22,7 @@ var invincible :=false
 @onready var shootpoint: Node2D = $shootpoint
 @onready var pickup_radi: Area2D = $pickup_radi
 
-var exptonext_base = 10
+var exptonext_base = 2
 var exptonext_increase = 1.4
 
 var shootpoint_distance = 50
@@ -32,6 +34,7 @@ func _ready() -> void:
 	timer.timeout.connect(_throwknife)
 	exptonext = exptonext_base
 	sprite_2d.modulate = Color(0.941, 0.341, 0.0, 1.0)
+	hp_changed.emit(hlt,maxhp)
 func _physics_process(_delta: float) -> void:
 	var input := Input.get_vector("ui_left","ui_right","ui_up","ui_down")
 	velocity = input*spd
@@ -87,6 +90,7 @@ func Damage(amt):
 	if invincible:
 		return
 	hlt-=amt
+	hp_changed.emit(hlt,maxhp)
 	invincible = true
 	modulate = Color(0.719, 0.034, 0.0, 1.0)
 	await get_tree().create_timer(0.5).timeout
@@ -103,8 +107,9 @@ func _on_pickup_radi_area_entered(area: Area2D) -> void:
 func add_exp(amt):
 	print("expadded", amt)
 	exp += amt
-	exp_changed.emit(exp,exptonext)
+	
 	while exp >= exptonext:
+		exp-=exptonext
 		level += 1
 		exptonext = int(exptonext_base*pow(exptonext_increase, level-1))
 		levelup.emit(level)
@@ -116,4 +121,6 @@ func apply_upgrade(id:String):
 		"firerate": timer.wait_time = max(0.1, timer.wait_time*0.85)
 		"pierce":knife_pierce +=1
 		"speed" : spd+=20
-		"heal" : hlt+= 30
+		"heal":
+			hlt+= 30 
+			hp_changed.emit(hlt,maxhp)

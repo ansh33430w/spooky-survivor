@@ -417,6 +417,16 @@ size = Vector2(7, 7.5)
 [sub_resource type="CircleShape2D" id="CircleShape2D_8vbdi"]
 radius = 167.96725
 
+[sub_resource type="Gradient" id="Gradient_0d5a4"]
+offsets = PackedFloat32Array(0, 0.70253164)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_0d5a4"]
+gradient = SubResource("Gradient_0d5a4")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0, 1)
+
 [node name="player" type="CharacterBody2D" unique_id=11276629]
 script = ExtResource("1_1erkr")
 knife_scn = ExtResource("2_ckam6")
@@ -449,5 +459,10 @@ collision_mask = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="pickup_radi" unique_id=2138712306]
 shape = SubResource("CircleShape2D_8vbdi")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1178629042]
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_0d5a4")
+texture_scale = 4.51
 
 [connection signal="area_entered" from="pickup_radi" to="." method="_on_pickup_radi_area_entered"]
