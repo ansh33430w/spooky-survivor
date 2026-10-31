@@ -38,6 +38,7 @@ At first I envisioned this game with more complex mechanism and animations and a
 4. level up system
 5. power-up on level-up
 6. map
+7. 2d lighting on mainmenu
 
 # To be added 
 1. more monsters
@@ -78,5 +79,13 @@ knife auto fire on mouse position
  there is a bug  in which when you kill first monster and collected its exp orb , the level jumps from level 1 to level 6 ..
 
 
+# Assets source...
+
+All the assets right goes to their respective owners. some are listed below
+
+1. Eris Esra's Character Template 4.1 --- https://erisesra.itch.io/character-templates-pack
+2. fount -- blackcroft https://www.dafont.com/blackcraft.font
+3. monsters https://zerie.itch.io/tiny-rpg-character-asset-pack-02
+   
  
   
