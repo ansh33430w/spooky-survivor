@@ -27,23 +27,23 @@ At first I envisioned this game with more complex mechanism and animations and a
 
 
  # tech used
-   this project was made using godot 4.7.2 stable and be edited using that 
+   this project was made using godot 4.7.2 stable and should be edited using that 
   
 
 # Things accomplished
 
 1. A player with 8 directional player  movement with hurt and death animation
-2. infinite spawning mosnters
+2. infinite spawning monster
 3. experience collection system
 4. level up system
-5. powerr-up on levelup
+5. power-up on level-up
 6. map
 
 # To be added 
 1. more monsters
-2. A boss mosnter
+2. A boss monster
 3. A period raid system
-4. differernt weapons
+4. different weapons
 5. area of effect powers
 
 # project structure
