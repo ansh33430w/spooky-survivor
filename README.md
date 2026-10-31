@@ -1,9 +1,13 @@
 # SPOOKY SURVIVOR
 
- Spooky survivor is 2D atmosphere of halloween so , spooky adventure.  
+ Spooky survivor is 2D  bullet hell with atmosphere of halloween 
  <img width="630" height="348" alt="image" src="https://github.com/user-attachments/assets/780684d4-bfaf-4a35-9be6-426b9d50d4f0" />
 
 <img width="617" height="334" alt="image" src="https://github.com/user-attachments/assets/54037087-9636-4c76-8d42-ac6d7a5a1c64" />
+
+<img width="636" height="344" alt="image" src="https://github.com/user-attachments/assets/ec2108f5-4174-4669-ba56-d527f7ff50d4" />
+
+
 
  # Overview
 
@@ -12,12 +16,19 @@
   I wish you luck to kill all of them if you can !!!!!!
 
 
+ if given simple description its just you kill monsters , level up , use power ups , and survive  as long as you can
 
 
-  # tech used
+# Inspiration 
 
-  GODOT And GDscript
+the motive behind this game came from my most beloved game genre that is bullet hell like UBERMOSH game series or a mobile game survivor.io 
 
+At first I envisioned this game with more complex mechanism and animations and a boon and god system like hades but due to time constraints [ or maybe my laziness] i couldn't complete it on time ....
+
+
+ # tech used
+   this project was made using godot 4.7.2 stable and be edited using that 
+  
 
 # Things accomplished
 
@@ -61,5 +72,11 @@ and hit play
 arrow keys for movement control
 
 knife auto fire on mouse position
-   
+
+
+# current bugs 
+ there is a bug  in which when you kill first monster and collected its exp orb , the level jumps from level 1 to level 6 ..
+
+
+ 
   
